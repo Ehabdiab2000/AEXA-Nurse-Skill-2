@@ -1,0 +1,332 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "dubai nurse",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "NameIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person",
+              "samples": [
+                "name is {name}",
+                "my name is {name}",
+                "{name}"
+              ]
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AgeIntent",
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{age} is my age",
+                "i am {age} years old",
+                "age is {age}",
+                "{age}"
+              ]
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "ComplainIntent",
+          "slots": [
+            {
+              "name": "complain",
+              "type": "complain",
+              "samples": [
+                "{complain} is my complaint",
+                "complaint is {complain}",
+                "{complain}"
+              ]
+            }
+          ],
+          "samples": [
+            "complain is {complain}"
+          ]
+        },
+        {
+          "name": "WeightIntent",
+          "slots": [
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{weight}",
+                "weight is {weight} kilogram",
+                "{weight} k. g. s"
+              ]
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "HeightIntent",
+          "slots": [
+            {
+              "name": "height",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{height} feets",
+                "{height}   ft",
+                "{height}  feet",
+                "{height} "
+              ],
+              "multipleValues": {
+                "enabled": false
+              }
+            }
+          ],
+          "samples": []
+        },
+        {
+          "name": "TemperatureIntent",
+          "slots": [
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{temperature} degree",
+                "{temperature} degree celsius",
+                "{temperature}"
+              ]
+            }
+          ],
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "accident",
+                "synonyms": [
+                  "accident"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "stomach ache",
+                "synonyms": [
+                  "stomach ache"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "headache",
+                "synonyms": [
+                  "headache"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sore throat",
+                "synonyms": [
+                  "throat",
+                  "sore throat"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "fever",
+                "synonyms": [
+                  "fever"
+                ]
+              }
+            }
+          ],
+          "name": "complain"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "WeightIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1495110057028.1443383816042"
+              }
+            }
+          ]
+        },
+        {
+          "name": "NameIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.74558304094.1495529419227"
+              }
+            }
+          ]
+        },
+        {
+          "name": "AgeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "age",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.466501408369.164330144007"
+              }
+            }
+          ]
+        },
+        {
+          "name": "HeightIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "height",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.34016611456.653952024581"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TemperatureIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1186816617129.1445664403246"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ComplainIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "complain",
+              "type": "complain",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.190205996168.661518751484"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.74558304094.1495529419227",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me your name"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.466501408369.164330144007",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me your age"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1495110057028.1443383816042",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me your weight is kilogram"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.190205996168.661518751484",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you tell me your complain"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.34016611456.653952024581",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me your height in feets"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1186816617129.1445664403246",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please tell me your temperature degree celsius"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "14"
+}
